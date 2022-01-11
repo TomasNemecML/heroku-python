@@ -1,89 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Objednavka</title>
-    </head>
-    <h3>Môžete si objednať ktotýkoľvek z našich produktov</h3>
-        <style>
-            td{border: 2px solid black; text-align: center;}
-            table{border: 2px solid black;}
-        </style>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomas Nemec API</title>
 
-        <table>
-            <tr>
-                <td>Práčka</td>
-                <td>Notebook</td>
-                <td>Chladnička</td>
-                <td>Mobilný telefón</td>
-                <td>Sporák</td>
-            </tr>
-            <tr>
-                <td><img src="https://www.prbelektro.sk/wp-content/uploads/2019/02/ew8w261b.png" width="290px"></td>
-                <td><img src="https://dealplanet.sk/wp-content/uploads/2021/01/mi-notebook-pro-15-2020-1-1.png" width="290px"></td>
-                <td><img src="https://i.cdn.nrholding.net/56680855/1000/1000" width="290px"></td>
-                <td><img src="https://www.huramobil.cz/fotocache/mid/STMTOSHR10XX051.jpg" width="290px"></td>
-                <td><img src="https://cdn.nay.sk/images/img-large/1/1034111.jpg" width="290px"></td>
-            </tr>
-        </table>    
-        <big>Ak si dnes objednate, doručíme vám to už zajtra!..</big><br><br>
-        <form method="POST" enctype="text/plain" id="form"></form>
-            <fieldset style="width:1463px">
-                <legend>Osobné údaje</legend>
-                
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    
+    <h2>Welcome to my api.</h2>
 
-                        <label for="meno">Meno a priezvisko: </label> 
-                            <input type="text" name="Meno a priezvisko" id="meno" required><br>
+    <br>
+    
+    <h4>endpoints</h4>
+    <ul>
+        <li>/json</li>
 
-                        <label for="mail" >E-mail: </label> 
-                            <input type="email" name="mail" id="mail" required><br>
-
-                        <label for="tel">Telefnonne cislo: </label> 
-                            <input type="number" name="tel" id="tel" required><br>
-
-                        <label>Adresa:</label>
-                            <textarea cols="50" rows="5" required></textarea><br>
-            </fieldset>
-            <fieldset style="width:1463px">
-                <legend>Objednávka</legend>
-                <fieldset>
-                    <label>Pobočka, z ktorej chcete objednávku</label><br>
-                        <input type="radio" name="pobocka" id="bratislava" value="bratislava">
-                            <label for="bratislava">Bratislava</label><br>
-                        <input type="radio" name="pobocka" id="trnava" value="trnava">
-                            <label for="trnava">Trnava</label> <br>
-                        <input type="radio" name="pobocka" id="zilina" value="zilina">
-                            <label for="zilina">Žilina</label><br>
-                        <input type="radio" name="pobocka" id="presov" value="presov">
-                            <label for="presov">Prešov</label><br>
-                        <input type="radio" name="pobocka" id="kosice" value="kosice">
-                            <label for="kosice">Košice</label><br>
-                </fieldset>
-                <fieldset>
-                    <label>Tovar, ktorý si objednávaam:</label><br>
-                        <input type="checkbox" name="tovar" id="pracka" value="pracka">
-                            <label for="pracka">Práčka</label>
-                        <input type="checkbox" name="tovar" id="notebook" value="notebook">
-                            <label for="notebook">Notebook</label>
-                        <input type="checkbox" name="tovar" id="chladnicka" value="chladnicka">
-                            <label for="chladnicka">Chladnička</label>
-                        <input type="checkbox" name="tovar" id="telefon" value="telefon">
-                            <label for="telefon">Mobilný telefón</label>
-                        <input type="checkbox" name="tovar" id="sporak" value="sporak">
-                            <label for="sporak">Sporák</label><br>
-                </fieldset>
-            </fieldset>
-                    <br> *Spracovanie osobných údajov bude využité iba pre potrebz objednávky,osobné údaje nebudú posunuté tretím osobám <br><br>
-                    <input type="submit" id="objednat" name="objednat" value="Odošli"><br>
-        </form>
+    </ul>
 
 
-    </body>
 
-    <footer>
-        <br>vytvoril: <i>Tomáš Ozaniak</i>
-    </footer>
-
-
-</html>   
+</body>
+</html>
