@@ -10,17 +10,105 @@
 </head>
 <body>
     
-    <h2>Welcome to my api.</h2>
+<p> <!DOCTYPE html>
+<html>
+<head>
+    <title>Písomná práca</title>
+    <meta charset="UTF-8">
 
-    <br>
+
+</head>
+
+
+
+<body>
+
+    <h2>Spotrebiče poslednej potreby</h2>
+    <table border="1px">
+    <tr>
+    <td style="text-align: center;">Práčka</td>
+    <td style="text-align: center;">Notebook</td>
+    <td style="text-align: center;">Chladnička</td>
+    <td style="text-align: center;">Mobilný telefón</td>
+    <td style="text-align: center;">Sporák</td>
+    </tr>
     
-    <h4>endpoints</h4>
-    <ul>
-        <li>/json</li>
+    
+    
+    <tr>
+    <td><img src="https://www.kvalitnytovar.sk/fotky39032/fotos/_vyr_395166_Detska-pracka.png" width="200px"></td>
+    <td><img src="https://d15-a.sdn.cz/d_15/c_img_E_I/t80BtrX.jpeg?fl=cro,0,0,1212,682%7Cres,1200,,1%7Cwebp,75" width="200px"></td>
+    <td><img src="https://www.pottenpannen.sk/data/images/products/26039/1568324801-fab32rpk3.jpg" width="200px"></td>
+    <td><img src="https://ratrading.co/wp-content/uploads/2020/10/apple-iphone-12-pro-2.jpg" width="200px"></td>
+    <td><img src="https://gastrokuchyne.sk/wp-content/uploads/2018/02/Elektricky-sporak-6-kruhovych-platni-otvorena-podstavba-1.jpg" width="200px"></td>I
+    </tr>
+    
+    
+    </table>
+<form aria-setsize="100px">
+<fieldset>
+<legend>Osobné údaje*</legend>
 
-    </ul>
+<label for="meno">Meno a priezvysko</label>
+<input type="text" name="meno" id="meno" required>
+<br>
+<label for=" email">E-mail</label>
+<input type="email" name="email" id=" email" required>
+<br>
+<label for="tel">Telefónne číslo</label>
+<input type="number" name="tel" id="tel" required>
+<br>
+<label for="adresa">Adresa</label>
+<textarea required></textarea>
+
+<br>
+</fieldset>
 
 
+<fieldset aria-required="true">
+    <legend>Objednávka</legend>
 
+    <fieldset aria-required="true">
+Pobočka, z ktorej chcete objednávku dodať:
+
+<br>
+        <input type="radio" name="mesto" id="bratislava" required>
+        <label>Bratislava</label>
+        <br>
+        <input type="radio" name="mesto" id="trnava" required>
+        <label>Trnava</label>
+        <br>
+        <input type="radio" name="mesto" id="zilina" required>
+        <label>Žilina</label>
+        <br>
+        <input type="radio" name="mesto" id="presov" required>
+        <label>Prešov</label>
+        <br>
+        <input type="radio" name="mesto" id="kosice" required>
+        <label>Košice</label>
+    </fieldset>
+    <fieldset>
+        <input type="checkbox" name="spotrebič" id="pracka">
+        <label>Práčka</label>
+        
+        <input type="checkbox" name="spotrebič" id="notebook">
+        <label>Notebook</label>
+        
+        <input type="checkbox" name="spotrebič" id="chladnicka">
+        <label>Chladnička</label>
+        
+        <input type="checkbox" name="spotrebič" id="mobilny telefon">
+        <label>Mobilný telefón</label>
+
+        <input type="checkbox" name="spotrebič" id="sporak">
+        <label>Sporák</label>
+    </fieldset>
+</fieldset>
+
+*Spracovanie osobných údajov bude iba pre potreby objednávky, osobné údaje nebudú posunuté tretím osobám.
+<button type="submit">Odoslať</button>
+</form>    
+
+</body> </p>
 </body>
 </html>
