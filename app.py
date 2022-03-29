@@ -21,6 +21,7 @@ def json():
         }]
     }
 
+@app.route('/image')
 def image():
     return '<img src="https://tomasnemec.eu/gallery/Memoji transparent .png">'
 
