@@ -21,5 +21,8 @@ def json():
         }]
     }
 
+def image():
+    return '<img src="https://tomasnemec.eu/gallery/Memoji transparent .png">'
+
 if __name__ == '__main__':
     app.run(debug=True)
