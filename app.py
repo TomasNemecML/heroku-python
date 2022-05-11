@@ -1,19 +1,33 @@
-from crypt import methods
 from flask import Flask, render_template, request
 from pythonScripts.alzaScraper import getPriceAlza
+from pythonScripts.amazonScraper import getPriceAmazon
+from pythonScripts.webScraperByClass import getPrice
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
+def index():
     return render_template("index.html")
+
+
+@app.route("/getprice")
+def getprice():
+    link = request.args.get("link")
+    tag = request.args.get("tag")
+    classToSearch = request.args.get("class")
+    return f"{getPrice(str(link), classToSearch, tag)}"
 
 
 @app.route('/alza', methods=["GET"])
 def alza():
-    print(request.args.get("link"))
-    return "success"
+    link = request.args.get("link")
+    return f"{getPriceAlza(str(link))}"
 
+
+@app.route('/amazon', methods=["GET"])
+def amazon():
+    link = request.args.get("link")
+    return f"{getPriceAmazon(str(link))}"
 
 
 # @app.route("/", subdomain="api")
