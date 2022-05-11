@@ -1,10 +1,18 @@
-from flask import Flask, render_template
+from crypt import methods
+from flask import Flask, render_template, request
+from pythonScripts.alzaScraper import getPriceAlza
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
     return render_template("index.html")
+
+
+@app.route('/alza', methods=["GET"])
+def alza():
+    print(request.args.get("link"))
+    return "success"
 
 
 
