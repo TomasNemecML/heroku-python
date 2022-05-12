@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Flask, render_template, request
 from pythonScripts.alzaScraper import getPriceAlza
 from pythonScripts.amazonScraper import getPriceAmazon
@@ -28,6 +29,11 @@ def alza():
 def amazon():
     link = request.args.get("link")
     return f"{getPriceAmazon(str(link))}"
+
+
+# debug ednpoint
+@app.route("/debug", methods=["GET"])
+
 
 
 # @app.route("/", subdomain="api")
