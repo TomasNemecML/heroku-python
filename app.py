@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+from pythonScripts.bestprice import bestPrice
 from pythonScripts.alzaScraper import getPriceAlza
 from pythonScripts.webScraperByClass import getPrice
 from pythonScripts.debug import getPage
@@ -14,10 +15,10 @@ def index():
 @app.route('/bestprice')
 def bestprice():
     
-    
-    return "best price"
+    productID = request.args.get("id")
+    return bestPrice(productID)
 
-    
+
 
 @app.route("/getprice")
 def getprice():
