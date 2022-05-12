@@ -1,8 +1,8 @@
-from crypt import methods
 from flask import Flask, render_template, request
-from pythonScripts.alzaScraper import getPriceAlza, getAlzaPage
-from pythonScripts.amazonScraper import getPriceAmazon
+
+from pythonScripts.alzaScraper import getPriceAlza
 from pythonScripts.webScraperByClass import getPrice
+from pythonScripts.debug import getPage
 
 app = Flask(__name__)
 
@@ -10,6 +10,14 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+
+@app.route('/bestprice')
+def bestprice():
+    
+    
+    return "best price"
+
+    
 
 @app.route("/getprice")
 def getprice():
@@ -19,29 +27,20 @@ def getprice():
     return f"{getPrice(str(link), classToSearch, tag)}"
 
 
+
 @app.route('/alza', methods=["GET"])
 def alza():
     link = request.args.get("link")
     return f"{getPriceAlza(str(link))}"
 
 
-@app.route('/amazon', methods=["GET"])
-def amazon():
-    link = request.args.get("link")
-    return f"{getPriceAmazon(str(link))}"
-
 
 # debug ednpoint
 @app.route("/debug", methods=["GET"])
 def debug():
     link = request.args.get("link")
-    return getAlzaPage(link)
+    return getPage(link)
 
-
-
-# @app.route("/", subdomain="api")
-# def api():
-#     return "api"
 
 if __name__ == '__main__':
     # app.config['SERVER_NAME'] = "test.abc"
