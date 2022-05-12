@@ -1,6 +1,6 @@
 from crypt import methods
 from flask import Flask, render_template, request
-from pythonScripts.alzaScraper import getPriceAlza
+from pythonScripts.alzaScraper import getPriceAlza, getAlzaPage
 from pythonScripts.amazonScraper import getPriceAmazon
 from pythonScripts.webScraperByClass import getPrice
 
@@ -33,6 +33,9 @@ def amazon():
 
 # debug ednpoint
 @app.route("/debug", methods=["GET"])
+def debug():
+    link = request.args.get("link")
+    return getAlzaPage(link)
 
 
 
